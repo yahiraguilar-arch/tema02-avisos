@@ -16,8 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from avisos.views import landing_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include("avisos.urls")),
+    #path("avisos/", include("avisos.urls")),
+    #path("", include("avisos.urls")), 
+    path("", landing_page) # Página principal redirige a avisos
 ]

@@ -16,3 +16,7 @@ class AvisosVigentesListView(ListView):
 			.filter(fecha_inicio__lte=hoy, fecha_fin__gte=hoy)
 			.order_by('-fecha_inicio')
 		)
+
+
+def landing_page(request):
+	return render(request, 'landing.html')
